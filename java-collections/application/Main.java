@@ -3,12 +3,15 @@ package application;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 
 public class Main {
 
     public static void main(String[] args) {
-        
+
+        /*
         //Collection é a interface raiz da hierarquia da API Collections do Java.
         Collection<Integer> numbers = new ArrayList<>(List.of(1, 20, 4, 50, 60)); //ArrayList é um subtipo de Collection
         Collection<Integer> numbers2 = new ArrayList<>(List.of(11, 23, 33, 20));
@@ -49,7 +52,44 @@ public class Main {
         for(Integer i : b) {
             System.out.print(i + " ");
         }
+        System.out.println("");*/
+
+
+        /**
+         * Interface List
+         * É um subtipo da interface Collection
+         * É um representação de uma coleção em que os elementos são inseridos de forma sequencial e a ordem de inserção é mantida
+         * Permite elementos duplicados.
+         * Elementos são acessados por índices
+         * É uma coleção mais especifica do que a interface Collection
+         * ArrayList e LinkedList são classes que implementam a interface List 
+         * */ 
+
+        List<String> nomes = new LinkedList<>(List.of("Pedro", "André", "Tiago", "João", "Filipe", "Bartolomeu", "Tomé", "Mateus", "Judas", "Tiago"));
+
+        System.out.println(nomes.get(1)); //obtém o elemento que está indexado na posição 1 da lista de elementos
+        System.out.println(nomes.indexOf("Tiago")); //retorna o indice da primeira ocorrencia do elemento na lista 
+        System.out.println(nomes.lastIndexOf("Tiago")); //obtém o indice daultima ocorrencia na lista do elemento fornecido como parametro 
+
+        ListIterator<String> nomesIt = nomes.listIterator(nomes.size()); //obtém um iterator especifico para percorrer listas em uma posição especifica
+
+        while(nomesIt.hasPrevious()) { //percorre a lista em ordem inversa
+            System.out.print(nomesIt.previous() + " ");
+        }
+
         System.out.println("");
+
+        nomes.remove(8); //remove um elemento de uma posição especifica
+        System.out.println(nomes);
+
+        nomes.set(8, "Paulo");
+        System.out.println(nomes); //realiza a troca de elementos de uma determinda posição
+
+        List<String> nomes2 = nomes.subList(0, 3); //recupera uma sublista da lista original
+        System.out.println(nomes2);
+
+
+
 
     }
     
