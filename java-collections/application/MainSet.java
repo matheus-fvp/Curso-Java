@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class MainSet {
     public static void main(String[] args) {
@@ -43,5 +44,22 @@ public class MainSet {
         for(int i : set2) {
             System.out.println(i);
         }
+
+
+        /**
+         * TreeSet
+         * Armazena o elementos de acordo com a implementção da interface Comparable pela classe dos objetos que armazenados
+         */
+         System.out.println("====================TreeSet======================");
+         Set<Integer> setTree = new TreeSet<>();
+         setTree.add(20);
+         setTree.add(1);
+         setTree.add(10);
+         for(int i : setTree) {
+            System.out.println(i);
+        }
+
+
+
     }
 }
