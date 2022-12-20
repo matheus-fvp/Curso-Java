@@ -1,6 +1,7 @@
 package application;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -87,10 +88,6 @@ public class Main {
 
         List<String> nomes2 = nomes.subList(0, 3); //recupera uma sublista da lista original
         System.out.println(nomes2);
-
-
-
-
     }
     
 }
