@@ -59,6 +59,10 @@ public class MainSet {
             System.out.println(i);
         }
 
+        String a = "Matheus";
+        String b = "Fernando";
+        String ab = a + " " + b;
+        System.out.println(ab);
 
 
     }
